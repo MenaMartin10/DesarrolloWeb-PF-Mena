@@ -440,6 +440,8 @@ footer p{
         border: 1px solid #ffffff34;
         border-radius: 10px;
         text-align: center;
+        margin: 0px;
+        margin-top: 50px;
     }
 
     .image img{
