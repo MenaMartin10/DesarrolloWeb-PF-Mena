@@ -21,7 +21,7 @@ header{
 }
 
 header span{
-    color: #ffff00
+    color: #ffff00;
 }
 
 
@@ -86,11 +86,11 @@ main{
 }
 
 main span{
-    color: yellow;
+    color: #ffff00;
 }
 
 .main p{
-    font-weight: bolder;
+    font-weight: bold;
 }
 
 .images {
