@@ -41,15 +41,14 @@ header nav ul li a{
     color: #ffffff;
     font-size: 20px;
     transition: 0.5s;
-    padding: 20px;
     margin-right: 25px;
+    border-radius: 5px;
 }
 
 header nav ul li a:hover{
     color: #000000;
     background: #ffff00;
-    border-radius: 10px;
-    padding: 20px;
+    border-radius: 5px;
 }
 
 .logo img{
@@ -307,6 +306,29 @@ footer p{
     text-align: center;
 }
 
+.navbar-toggler-icon{
+    width: 2.5em;
+    height: 2.5em;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='white' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar .container-fluid{
+    display: flex;
+    justify-content: center;
+
+}
+
+.navbar-nav{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.mb-2 {
+    margin-bottom: 0.5rem !important;
+    margin-top: 2.5rem;
+}
+
 @media only screen and (max-width: 600px) {
  
     header {
@@ -403,9 +425,14 @@ footer p{
     .form{
         display: block;
     }
-
 }
 
+@media (min-width: 992px){
+    .navbar{
+        display: inline-block;
+    }
+}
+  
 @media only screen and (max-width: 1024px) {
 
     header {
@@ -432,7 +459,6 @@ footer p{
         grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
         grid-gap: 20px;
     }
-
 }
 
 @media only screen and (max-width: 1024px) {
@@ -449,8 +475,6 @@ footer p{
         width: 220px;
         height: 220px;
     }
-
-
 }
 
 @media only screen and (max-width: 1400px) {
@@ -468,11 +492,11 @@ footer p{
     }
 
     .logo img{
-        width: 290px;
-        height: 250px;
+        width: 450px;
+        height: 450px;
+        position: relative;
+        left: 0;
     }
-
-
 }
 
     
