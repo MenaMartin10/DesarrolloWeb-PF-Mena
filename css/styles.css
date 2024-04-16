@@ -309,6 +309,26 @@ footer .by {
   background-color: yellow;
 }
 
+@media only screen and (max-width: 450px) and (min-width: 250px) {
+  .social {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .social a {
+    font-size: 1.5rem;
+    margin: 5px;
+  }
+}
+@media only screen and (max-width: 992px) and (min-width: 250px) {
+  .images {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    gap: 10px;
+  }
+}
 @media only screen and (max-width: 600px) {
   main .mt {
     display: inline-block;
