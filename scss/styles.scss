@@ -199,13 +199,8 @@ main {
           margin-bottom: 20px;
           border: none;
           border-radius: 5px;
-          background-color: #333;
-          color: white;
-
-          &:focus {
-            outline: none;
-            box-shadow: 0 0 5px $color-yellow;
-          }
+          background-color: $color-white;
+          color: $color-black;
         }
 
         textarea {
@@ -214,17 +209,14 @@ main {
         }
 
         button[type='submit'] {
-          background-color: $color-yellow;
-          color: white;
+          background-color: $color-white;
+          color: $color-black;
           padding: 10px 20px;
           border: none;
           border-radius: 5px;
           cursor: pointer;
-          transition: background-color 0.3s ease;
-
-          &:hover {
-            background-color: darken($color-yellow, 10%);
-          }
+          transition: 0.5s;
+          @include hover-effect;
         }
       }
     }

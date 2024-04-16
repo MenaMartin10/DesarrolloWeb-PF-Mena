@@ -186,30 +186,26 @@ main .form form .forms textarea {
   margin-bottom: 20px;
   border: none;
   border-radius: 5px;
-  background-color: #333;
-  color: white;
-}
-main .form form .forms input[type=text]:focus,
-main .form form .forms input[type=email]:focus,
-main .form form .forms textarea:focus {
-  outline: none;
-  box-shadow: 0 0 5px yellow;
+  background-color: white;
+  color: black;
 }
 main .form form .forms textarea {
   resize: none;
   height: 150px;
 }
 main .form form .forms button[type=submit] {
-  background-color: yellow;
-  color: white;
+  background-color: white;
+  color: black;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: 0.5s;
 }
 main .form form .forms button[type=submit]:hover {
-  background-color: #cccc00;
+  color: black;
+  background: yellow;
+  border-radius: 5px;
 }
 
 footer {
