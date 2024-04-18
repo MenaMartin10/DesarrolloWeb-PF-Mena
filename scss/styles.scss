@@ -74,7 +74,7 @@ main {
 
     .textmain {
       max-width: 50%;
-      text-align: justify;
+      text-align: start;
       position: relative;
       top: 90px;
       @include format-p;
@@ -85,6 +85,10 @@ main {
       h1{
         font-size: calc(1.5vw + 10px);
       }
+      p{
+
+      }
+
     }
   }
 
@@ -222,6 +226,7 @@ main {
           transition: 0.5s;
           @include hover-effect;  
         }
+        
       }
     }
   }
@@ -306,13 +311,26 @@ footer {
     justify-content: center;
     flex-direction: row;
     margin-top: 50px;
+    margin-bottom: 50px;
+    animation: focus-in-contract 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    }
+    @keyframes focus-in-contract {
+      0% {
+          letter-spacing: 1em;
+          filter: blur(12px);
+          opacity: 0;
+      }
+      100% {
+          filter: blur(0px);
+          opacity: 1;
+      }
+  }
 
     .mb-2 {
       margin-bottom: 0.5rem;
       margin-top: 2.5rem;
     }
   }
-}
 
 .text-black-hover:hover {
   color: black !important;
@@ -370,7 +388,7 @@ footer {
   }
 
   .social .fa {
-    font-size: 15px;
+    font-size: 30px;
   }
 
   #irarriba {
@@ -427,7 +445,7 @@ footer {
   }
 
   .social .fa {
-    font-size: 15px;
+    font-size: 30px;
   }
 
   #irarriba {
@@ -475,7 +493,7 @@ footer {
   }
 
   .social .fa {
-    font-size: 15px;
+    font-size: 30px;
   }
 
   #irarriba {
@@ -505,7 +523,7 @@ footer {
   }
 
   .social .fa {
-    font-size: 15px;
+    font-size: 30px;
   }
 
   #irarriba {

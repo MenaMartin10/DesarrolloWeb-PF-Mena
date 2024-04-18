@@ -79,7 +79,7 @@ main .mt .fotop img {
 }
 main .mt .textmain {
   max-width: 50%;
-  text-align: justify;
+  text-align: start;
   position: relative;
   top: 90px;
   font-weight: bold;
@@ -294,8 +294,21 @@ footer .by {
   justify-content: center;
   flex-direction: row;
   margin-top: 50px;
+  margin-bottom: 50px;
+  animation: focus-in-contract 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
-.navbar .container-fluid .navbar-nav .mb-2 {
+@keyframes focus-in-contract {
+  0% {
+    letter-spacing: 1em;
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+.navbar .container-fluid .mb-2 {
   margin-bottom: 0.5rem;
   margin-top: 2.5rem;
 }
@@ -346,7 +359,7 @@ footer .by {
     font-size: 10px;
   }
   .social .fa {
-    font-size: 15px;
+    font-size: 30px;
   }
   #irarriba {
     display: flex;
@@ -394,7 +407,7 @@ footer .by {
     text-align: center;
   }
   .social .fa {
-    font-size: 15px;
+    font-size: 30px;
   }
   #irarriba {
     display: flex;
@@ -441,7 +454,7 @@ footer .by {
     text-align: center;
   }
   .social .fa {
-    font-size: 15px;
+    font-size: 30px;
   }
   #irarriba {
     display: flex;
@@ -471,7 +484,7 @@ footer .by {
     left: 0;
   }
   .social .fa {
-    font-size: 15px;
+    font-size: 30px;
   }
   #irarriba {
     display: flex;
