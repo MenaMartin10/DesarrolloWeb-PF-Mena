@@ -234,6 +234,34 @@ main {
       }
     }
   }
+  #carouselExample {
+    .carousel-inner {
+      .carousel-item img {
+        max-width: 90%;
+        height: 100%;
+        margin: 0 auto;
+        border-radius: 10px;
+      }
+    }
+    .carousel-item {
+      transition: transform .6s cubic-bezier(0, -0.45, 0.84, -0.37);
+    }
+    .carousel-caption {
+      a {
+        color: $color-white;
+        text-decoration: none;
+        padding: 10px;
+        border: 1px solid rgba($color-white, 0.2);
+        border-radius: 5px;
+        @include hover-effect;
+      }
+      p {
+        background-color: rgba($color-black, 0.2);
+        padding: 20px;
+        border-radius: 5px;
+      }
+    }
+  }
   
 
 }
@@ -298,39 +326,6 @@ footer {
   color: black !important;
 }
 
-.images {
-  @include flex-grid;
-
-  .image {
-    position: relative;
-
-    img {
-      max-width: 100%;
-      height: auto;
-    }
-
-    p {
-      margin-top: 10px;
-      color: $color-white;
-    }
-
-    a {
-      @include flex-center;
-      @extend %border;
-      margin-top: 10px;
-      color: $color-yellow;
-      text-decoration: none;
-      transition: 0.5s;
-      border-radius: 5px; 
-      padding: 5px;
-
-      &:hover {
-        color: $color-black;
-        background-color: $color-yellow; 
-      }
-    }
-  }
-}
 
 @media only screen and (max-width: 450px) and (min-width: 250px) {
 
@@ -357,10 +352,17 @@ footer {
   main .map{
     height: 400px;
   }
+  .carousel-caption
+  p {
+    background-color: rgba($color-black, 0.2);
+    padding: 20px;
+    border-radius: 5px;
+    font-size: 12px;
+  }
 }
 
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
 
   main .mt {
     @include flex-block;
@@ -390,9 +392,12 @@ footer {
   main .map{
     height: 400px;
   }
+
 }
 
 @media screen and (min-width: 600px) {
+
+
   .allmuestras {
       display: flex;
       flex-wrap: wrap;
