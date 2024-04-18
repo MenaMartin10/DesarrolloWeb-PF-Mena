@@ -1,59 +1,50 @@
 @mixin flex-block{
-    display: inline-block;
+  display: inline-block;
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
+
+@mixin flex-grid {
+  display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    grid-gap: 20px;
+    align-items: center;
+    text-align: center;
+}  
+
+@mixin flex-space-around {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  } 
   
-  @mixin flex-center {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
+@mixin grid{
+  display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+    grid-gap: 20px;
+    align-items: center;
+}  
+
+@mixin format-p {
+    font-weight: bold; 
+  }   
+
+@mixin hover-effect {
+    &:hover {
+      color: $color-black;
+      background: $color-yellow;
+      border-radius: 5px;
     }
-  
-  @mixin flex-grid {
-    display: grid;
-      grid-template-columns: repeat(2, 1fr); 
-      grid-gap: 20px;
-      align-items: center;
-      text-align: center;
-  }  
-  
-  @mixin flex-space-around {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-    } 
-    
-  @mixin grid{
-    display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
-      grid-gap: 20px;
-      align-items: center;
   }  
 
-  @mixin grid-2{
-    display: grid;
-      grid-template-columns: 1fr;
-      grid-auto-rows: auto;
-      gap: 10px;
-
-  }
-  
-  @mixin format-p {
-      font-weight: bold; 
-    }   
-  
-  @mixin hover-effect {
-      &:hover {
-        color: $color-black;
-        background: $color-yellow;
-        border-radius: 5px;
-      }
-    }  
-  
-    @mixin hover-effect-s {
-      &:hover {
-        color: $color-black;
-        background: $color-yellow;
-        border-radius: 100%;
-      }
-    }  
+  @mixin hover-effect-s {
+    &:hover {
+      color: $color-yellow;
+      filter: brightness(100%);
+    }
+  }  

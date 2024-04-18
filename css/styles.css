@@ -86,6 +86,9 @@ main .mt .textmain {
 main .mt .textmain span {
   color: yellow;
 }
+main .mt .textmain h1 {
+  font-size: calc(1.5vw + 10px);
+}
 main .allmuestras {
   display: flex;
   justify-content: space-around;
@@ -107,7 +110,7 @@ main .muestras {
   border-radius: 10px;
   margin: 40px auto;
   padding: 20px;
-  text-align: justify;
+  text-align: center;
   filter: brightness(50%);
   transition: 1s;
 }
@@ -160,7 +163,7 @@ main .map {
   margin-top: 50px;
   margin-right: 20px;
   text-align: center;
-  width: 50%;
+  width: 100%;
   border-radius: 10px;
 }
 main .map iframe {
@@ -239,11 +242,11 @@ footer a {
   color: white;
   transition: 0.5s;
   padding: 10px;
+  filter: brightness(20%);
 }
 footer a:hover {
-  color: black;
-  background: yellow;
-  border-radius: 100%;
+  color: yellow;
+  filter: brightness(100%);
 }
 footer #irarriba {
   display: flex;
@@ -335,6 +338,9 @@ footer .by {
   .studio p {
     font-size: 10px;
   }
+  main .map {
+    height: 400px;
+  }
 }
 @media only screen and (max-width: 600px) {
   main .mt {
@@ -363,6 +369,9 @@ footer .by {
   main .allmuestras {
     width: 100%;
   }
+  main .map {
+    height: 400px;
+  }
 }
 @media screen and (min-width: 600px) {
   .allmuestras {
@@ -380,6 +389,9 @@ footer .by {
   }
   main .muestras .imgstudio img {
     max-width: 100%;
+  }
+  main .map {
+    height: 400px;
   }
 }
 @media (max-width: 992px) {
@@ -411,6 +423,9 @@ footer .by {
   }
   .logoimg2 img {
     position: relative;
+  }
+  main .map {
+    height: 400px;
   }
 }
 @media (max-width: 1400px) and (min-width: 992px) {
@@ -510,160 +525,6 @@ footer .by {
 .images .image a:hover {
   color: black;
   background-color: yellow;
-}
-
-@media only screen and (max-width: 450px) and (min-width: 250px) {
-  .navbar a {
-    font-size: 7px;
-  }
-  .social {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-  .social a {
-    font-size: 1.5rem;
-    margin: 5px;
-  }
-  .studio p {
-    font-size: 10px;
-  }
-}
-@media only screen and (max-width: 600px) {
-  main .mt {
-    display: inline-block;
-  }
-  .navbar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 10px;
-  }
-  .social .fa {
-    font-size: 15px;
-  }
-  #irarriba {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 10px;
-  }
-  main .form {
-    width: 100%;
-  }
-  main .allmuestras {
-    width: 100%;
-  }
-}
-@media screen and (min-width: 600px) {
-  .allmuestras {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  .muestra {
-    width: calc(50% - 10px);
-    margin-bottom: 20px;
-  }
-  .muestra img {
-    max-width: 100%;
-    height: auto;
-  }
-  main .muestras .imgstudio img {
-    max-width: 100%;
-  }
-}
-@media (max-width: 992px) {
-  .navbar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-  .social .fa {
-    font-size: 15px;
-  }
-  #irarriba {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 15px;
-  }
-  main .form {
-    width: 100%;
-  }
-  #map {
-    width: 100%;
-    height: 100%;
-  }
-}
-@media (max-width: 1400px) and (min-width: 992px) {
-  header nav ul {
-    max-width: 80%;
-    margin: 0 auto;
-  }
-}
-@media only screen and (max-width: 1024px) {
-  .mt {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-  .images {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
-    align-items: center;
-    text-align: center;
-  }
-  .social .fa {
-    font-size: 15px;
-  }
-  #irarriba {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 15px;
-  }
-  main .form {
-    width: 100%;
-  }
-}
-@media only screen and (max-width: 1400px) {
-  header {
-    display: block;
-  }
-  .mt {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-  .logo img {
-    width: 400px;
-    height: 400px;
-    position: relative;
-    left: 0;
-  }
-  .social .fa {
-    font-size: 15px;
-  }
-  #irarriba {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 15px;
-  }
-  main .form {
-    width: 100%;
-  }
 }
 
 /*# sourceMappingURL=styles.css.map */
