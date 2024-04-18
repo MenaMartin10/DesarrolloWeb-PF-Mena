@@ -91,19 +91,9 @@ main .mt .textmain h1 {
   font-size: calc(1.5vw + 10px);
 }
 main .allmuestras {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-main .allmuestras {
-  display: block;
-  margin: auto;
-  width: 80%;
-}
-main .allmuestras {
-  display: block;
-  margin: auto;
-  width: 80%;
+  display: grid;
+  gap: 50px;
+  justify-content: center;
 }
 main .muestras {
   display: block;
@@ -303,9 +293,10 @@ footer .by {
   display: flex;
   justify-content: center;
   flex-direction: row;
+  margin-top: 50px;
 }
 .navbar .container-fluid .navbar-nav .mb-2 {
-  margin-bottom: 0.5rem !important;
+  margin-bottom: 0.5rem;
   margin-top: 2.5rem;
 }
 
@@ -315,7 +306,7 @@ footer .by {
 
 @media only screen and (max-width: 450px) and (min-width: 250px) {
   .navbar a {
-    font-size: 7px;
+    font-size: 9px;
   }
   .social {
     display: flex;
