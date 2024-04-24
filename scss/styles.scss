@@ -22,7 +22,6 @@ header {
   @include flex-space-around;
   background: $color-black;
   text-align: center;
-  margin-top: 40px;
 
   span {
     color: $color-yellow;
@@ -60,13 +59,14 @@ main {
   border-bottom: 0.2px solid rgba($color-white, 0.7);
   color: $color-white;
   font-size: 17px;
-  margin: 30px;
   text-align: left;
   padding: 40px;
 
   .mt {
-    @include flex-center;
+    @include flex-space-evenly;
     overflow-y: hidden;
+    text-align: center;
+  }
 
     .fotop img {
       height: 600px;
@@ -257,8 +257,6 @@ main {
   }
   
 
-}
-
 footer {
   margin-bottom: 20px;
 
@@ -286,6 +284,7 @@ footer {
   #irarriba {
     @include flex-center;
     font-size: 15px;
+    margin-bottom: 80px;
   }
 
   .by {
@@ -340,6 +339,15 @@ footer {
     font-size: 9px;
   }
 
+  main .mt .textmain{
+    max-width: 100%;
+    text-align: start;
+    position: absolute;
+    left: 30px;
+    font-weight: bold;
+    margin-right: 20px;
+  }
+
   .social {
     display: flex;
     justify-content: space-between;
@@ -373,10 +381,20 @@ footer {
 
 }
 
+
 @media only screen and (max-width: 700px) {
 
   main .mt {
     @include flex-block;
+  }
+
+  main .mt .textmain{
+    max-width: 100%;
+    text-align: start;
+    position: absolute;
+    left: 30px;
+    font-weight: bold;
+    top: 650px;
   }
 
   .navbar {
@@ -482,7 +500,7 @@ footer {
 @media only screen and (max-width: 1024px) {
 
   .mt {
-    @include flex-center;
+    @include flex-space-evenly;
   }
 
   .images {
@@ -509,7 +527,7 @@ footer {
     }
 
   .mt {
-    @include flex-center;
+    @include flex-space-evenly;
   }
 
   .logo img {
