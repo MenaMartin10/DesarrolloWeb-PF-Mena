@@ -27,6 +27,11 @@
     display: flex;
     justify-content: space-evenly;
   } 
+
+  @mixin flex-space-between{
+    display: flex;
+    justify-content: space-between;
+  }
   
 @mixin grid{
   display: grid;
@@ -52,4 +57,16 @@
       color: $color-yellow;
       filter: brightness(100%);
     }
-  }  
+    
+  }
+
+  @mixin hover-effect-c{
+    &:hover {
+      color: $color-white;
+      filter: brightness(100%);
+      background-color: $color-white-t;
+    }
+  }
+      
+  
+  
