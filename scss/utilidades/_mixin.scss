@@ -47,15 +47,16 @@
 @mixin hover-effect {
     &:hover {
       color: $color-black;
-      background: $color-yellow;
+      background: $color-white;
       border-radius: 5px;
     }
   }  
 
   @mixin hover-effect-s {
     &:hover {
-      color: $color-yellow;
-      filter: brightness(100%);
+      color: $color-white;
+      filter: brightness(70%);
+      border-radius: 10px;
     }
     
   }
@@ -66,6 +67,10 @@
       filter: brightness(100%);
       background-color: $color-white-t;
     }
+  }
+
+  @mixin hover-none{
+    background-color: $color-bluedark;
   }
       
   

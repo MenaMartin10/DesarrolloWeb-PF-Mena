@@ -13,14 +13,14 @@
 }
 
 body {
-  background: $color-black;
+  background: $color-bluedark;
   background-size: cover;
   font-family: "Anta", sans-serif;
 }
 
 header {
   @include flex-space-around;
-  background: $color-black;
+  background: $color-bluedark;
   text-align: center;
 
   span {
@@ -51,6 +51,8 @@ header nav ul {
 .logo img {
   position: relative;
   left: 50px;
+  width: 420px;
+  height: 350px;
 }
 
 main {
@@ -59,7 +61,7 @@ main {
   color: $color-white;
   font-size: 17px;
   text-align: left;
-  padding: 40px;
+  padding: 25px;
 
   .mt {
     @include flex-space-evenly;
@@ -267,13 +269,12 @@ footer {
 
   .social {
     @include flex-center;
-    background: $color-black;
+    background: $color-bluedark;
     border-radius: 100%;
     margin: 40px;
     padding: 50px;
     font-size: xx-large;
     color: $color-white;
-    opacity: 0.9;
     gap: 20px;
   }
 
@@ -281,8 +282,8 @@ footer {
     text-decoration: none;
     color: $color-white;
     transition: 0.5s;
-    padding: 10px;
-    filter: brightness(20%);
+    padding: 5px;
+    border-radius: 10px;
     @include hover-effect-s;
   }
 
@@ -291,6 +292,7 @@ footer {
     font-size: 15px;
     margin-bottom: 80px;
   }
+  
 
   .by {
     color: $color-white;
@@ -335,6 +337,26 @@ footer {
 
 .text-black-hover:hover {
   color: black !important;
+}
+
+.navbar-toggler:focus {
+  text-decoration: none;
+  outline: 0;
+  box-shadow: none; 
+}
+
+@keyframes focus-in-contract{
+
+0% {
+  filter: blur(0%); 
+}
+}
+
+#carouselExample .carousel-inner .carousel-item img {
+  max-width: 80%;
+  height: 700px;
+  margin: 0 auto;
+  border-radius: 10px;
 }
 
 
@@ -396,12 +418,18 @@ footer {
     font-size: calc(8.5vw + 10px);
 }
 
+main .mt .textmain{
+  max-width: 100%;
+  text-align: start;
+  position: absolute;
+  left: 30px;
+  top: 450px;
 }
 
 
+}
 
-
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 700px) and (min-width: 450px) {
 
   main .mt {
     @include flex-block;
@@ -412,7 +440,7 @@ footer {
     text-align: start;
     position: absolute;
     left: 30px;
-    top: 585px;
+    top: 530px;
   }
 
   .navbar {
@@ -475,7 +503,6 @@ main .textmain{
 
 }
 
-
 @media (max-width: 992px) {
 
   .navbar {
@@ -517,15 +544,9 @@ main .textmain{
 
 }
 
-@media (max-width: 1400px) and (min-width: 992px) {
-    header nav ul {
-      max-width: 80%;
-      margin: 0 auto;
-    }
-  }
 
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1080px) {
 
   .mt {
     @include flex-space-evenly;
@@ -546,6 +567,8 @@ main .textmain{
   main .form {
     width: 100%;
   }
+
+
 }
 
 @media only screen and (max-width: 1400px) {
@@ -554,13 +577,19 @@ main .textmain{
         display: block;
     }
 
+    .navbar-collapse {
+      flex-basis: 100%;
+      flex-grow: 0;
+      align-items: center;
+  }
+
   .mt {
     @include flex-space-evenly;
   }
 
   .logo img {
-    width: 400px;
-    height: 400px;
+    width: 420px;
+    height: 280px;
     position: relative;
     left: 0;
   }
