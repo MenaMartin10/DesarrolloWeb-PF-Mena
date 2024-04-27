@@ -46,9 +46,7 @@
 
 @mixin hover-effect {
     &:hover {
-      color: $color-black;
-      background: $color-white;
-      border-radius: 5px;
+      color: $color-white-t;
     }
   }  
 
@@ -71,6 +69,13 @@
 
   @mixin hover-none{
     background-color: $color-bluedark;
+  }
+
+  @mixin main-hover{
+    &:hover{
+      background-image: url("../images/fondohover.png");
+    }
+
   }
       
   

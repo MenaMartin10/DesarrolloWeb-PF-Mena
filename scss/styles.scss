@@ -22,10 +22,6 @@ header {
   @include flex-space-around;
   background: $color-bluedark;
   text-align: center;
-
-  span {
-    color: $color-yellow;
-  }
 }
 
 header nav ul {
@@ -41,16 +37,39 @@ header nav ul {
       color: $color-white;
       font-size: 20px;
       transition: 0.5s;
-      margin-right: 25px;
       border-radius: 5px;
-      @include hover-effect;
+      margin-left: 10px;
+      margin-right: 10px;
+      @include hover-effect-s;
     }
+  }
+
+  .text-black-hover:hover {
+    color: rgb(255, 255, 255) !important;
+  }
+
+  .nav-itemi{
+    border-bottom: 0.2px solid rgba($color-white, 0.7);
+  }
+
+  .nav-itemp{
+    border-bottom: 0.2px solid rgba($color-white, 0.7);
+  }
+  .nav-itemsm{
+    border-bottom: 0.2px solid rgba($color-white, 0.7);
+  }
+
+  .nav-items{
+    border-bottom: 0.2px solid rgba($color-white, 0.7);
+  }
+
+  .nav-itemc{
+    border-bottom: 0.2px solid rgba($color-white, 0.7);
   }
 }
 
 .logo img {
-  position: relative;
-  left: 50px;
+
   width: 420px;
   height: 350px;
 }
@@ -62,6 +81,15 @@ main {
   font-size: 17px;
   text-align: left;
   padding: 25px;
+ 
+
+  .maininicio{
+    background: url("../images/fondo1.png");
+    background-size: cover;
+    background-position: center;
+    transition: 0.5s;
+    @include main-hover;
+  }
 
   .mt {
     @include flex-space-evenly;
@@ -74,13 +102,19 @@ main {
     }
 
     .textmain {
+      align-content: center;
       max-width: 50%;
       text-align: start;
-      position: relative;
-      top: 90px;
       font-size: x-large;
       span {
         color: $color-yellow;
+      }
+
+      #contacto{
+        text-decoration: none;
+        text-decoration:underline;
+        color: $color-white;
+        @include hover-effect-s;
       }
 
       h1{
@@ -97,7 +131,7 @@ main {
 
   .muestras {
     display: block;
-    border: 1px solid rgba($color-white, 0.2);
+    background-color: rgba($color-black, 0.2);
     border-radius: 10px;
     margin: 40px auto;
     padding: 20px;
@@ -148,13 +182,14 @@ main {
 
       a {
         color: $color-white;
-        @extend %border;
+        background-color: rgba($color-black, 0.2);
         text-decoration: none;
         font-weight: bold;
         display: block;
         margin-bottom: 10px;
         transition: 0.5s;
         padding: 20px;
+        border-radius: 10px;
         @include hover-effect;
         
       }
@@ -191,7 +226,7 @@ main {
     margin-top: 50px;
     width: 50%; 
     padding: 20px;
-    background-color: rgba($color-black, 0.7);
+    border-radius: 15px;
     color: white;
 
     form {
@@ -232,6 +267,20 @@ main {
       }
     }
   }
+
+  .pyd{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .datos h3{
+    margin: 100px;
+    padding: 20px;
+    border-bottom: 1px solid rgba($color-white, 0.2);
+    border-top: 1px solid rgba($color-white, 0.2);
+  }
+
   #carouselExample {
     .carousel-inner {
       .carousel-item img {
@@ -426,6 +475,10 @@ main .mt .textmain{
   top: 450px;
 }
 
+.pyd{
+  display: block;
+}
+
 
 }
 
@@ -442,6 +495,7 @@ main .mt .textmain{
     left: 30px;
     top: 530px;
   }
+
 
   .navbar {
     @include flex-center;
@@ -476,6 +530,10 @@ main .textmain{
   font-size: medium;
 }
 
+.pyd{
+  display: block;
+}
+
 }
 
 
@@ -499,6 +557,10 @@ main .textmain{
 
   main .map{
     height: 400px;
+  }
+
+  .pyd{
+    display: block;
   }
 
 }
@@ -540,6 +602,10 @@ main .textmain{
 
   main .textmain{
     font-size: medium;
+  }
+
+  .pyd{
+    display: block;
   }
 
 }
@@ -587,9 +653,13 @@ main .textmain{
     @include flex-space-evenly;
   }
 
+  main .mt .textmain{
+    font-size: small;
+  }
+
   .logo img {
-    width: 420px;
-    height: 280px;
+    width: 390px;
+    height: 300px;
     position: relative;
     left: 0;
   }

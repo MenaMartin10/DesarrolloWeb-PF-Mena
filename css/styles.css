@@ -1,4 +1,4 @@
-.images .image a, .precios .precio a {
+.images .image a {
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 10px;
 }
@@ -23,9 +23,6 @@ header {
   background: #171b21;
   text-align: center;
 }
-header span {
-  color: yellow;
-}
 
 header nav ul {
   display: flex;
@@ -42,18 +39,35 @@ header nav ul li a {
   color: white;
   font-size: 20px;
   transition: 0.5s;
-  margin-right: 25px;
   border-radius: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 header nav ul li a:hover {
-  color: black;
-  background: white;
-  border-radius: 5px;
+  color: white;
+  filter: brightness(70%);
+  border-radius: 10px;
+}
+header nav ul .text-black-hover:hover {
+  color: rgb(255, 255, 255) !important;
+}
+header nav ul .nav-itemi {
+  border-bottom: 0.2px solid rgba(255, 255, 255, 0.7);
+}
+header nav ul .nav-itemp {
+  border-bottom: 0.2px solid rgba(255, 255, 255, 0.7);
+}
+header nav ul .nav-itemsm {
+  border-bottom: 0.2px solid rgba(255, 255, 255, 0.7);
+}
+header nav ul .nav-items {
+  border-bottom: 0.2px solid rgba(255, 255, 255, 0.7);
+}
+header nav ul .nav-itemc {
+  border-bottom: 0.2px solid rgba(255, 255, 255, 0.7);
 }
 
 .logo img {
-  position: relative;
-  left: 50px;
   width: 420px;
   height: 350px;
 }
@@ -66,6 +80,15 @@ main {
   text-align: left;
   padding: 25px;
 }
+main .maininicio {
+  background: url("../images/fondo1.png");
+  background-size: cover;
+  background-position: center;
+  transition: 0.5s;
+}
+main .maininicio:hover {
+  background-image: url("../images/fondohover.png");
+}
 main .mt {
   display: flex;
   justify-content: space-evenly;
@@ -76,14 +99,23 @@ main .fotop img {
   height: 600px;
 }
 main .textmain {
+  align-content: center;
   max-width: 50%;
   text-align: start;
-  position: relative;
-  top: 90px;
   font-size: x-large;
 }
 main .textmain span {
   color: yellow;
+}
+main .textmain #contacto {
+  text-decoration: none;
+  text-decoration: underline;
+  color: white;
+}
+main .textmain #contacto:hover {
+  color: white;
+  filter: brightness(70%);
+  border-radius: 10px;
 }
 main .textmain h1 {
   font-size: calc(1.5vw + 10px);
@@ -97,7 +129,7 @@ main .textmain h1 {
 
 .muestras {
   display: block;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   margin: 40px auto;
   padding: 20px;
@@ -140,17 +172,17 @@ main .textmain h1 {
 }
 .precios .precio a {
   color: white;
+  background-color: rgba(0, 0, 0, 0.2);
   text-decoration: none;
   font-weight: bold;
   display: block;
   margin-bottom: 10px;
   transition: 0.5s;
   padding: 20px;
+  border-radius: 10px;
 }
 .precios .precio a:hover {
-  color: black;
-  background: white;
-  border-radius: 5px;
+  color: rgba(255, 255, 255, 0.021);
 }
 .precios .precio .pagina {
   font-size: 24px;
@@ -183,7 +215,7 @@ main .textmain h1 {
   margin-top: 50px;
   width: 50%;
   padding: 20px;
-  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 15px;
   color: white;
 }
 .form form .forms p {
@@ -215,9 +247,20 @@ main .textmain h1 {
   transition: 0.5s;
 }
 .form form .forms button[type=submit]:hover {
-  color: black;
-  background: white;
-  border-radius: 5px;
+  color: rgba(255, 255, 255, 0.021);
+}
+
+.pyd {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.datos h3 {
+  margin: 100px;
+  padding: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 #carouselExample .carousel-inner .carousel-item img {
@@ -397,6 +440,9 @@ footer .by {
     left: 30px;
     top: 450px;
   }
+  .pyd {
+    display: block;
+  }
 }
 @media only screen and (max-width: 700px) and (min-width: 450px) {
   main .mt {
@@ -441,6 +487,9 @@ footer .by {
   main .textmain {
     font-size: medium;
   }
+  .pyd {
+    display: block;
+  }
 }
 @media screen and (min-width: 600px) {
   .muestra {
@@ -456,6 +505,9 @@ footer .by {
   }
   main .map {
     height: 400px;
+  }
+  .pyd {
+    display: block;
   }
 }
 @media (max-width: 992px) {
@@ -493,6 +545,9 @@ footer .by {
   }
   main .textmain {
     font-size: medium;
+  }
+  .pyd {
+    display: block;
   }
 }
 @media only screen and (max-width: 1080px) {
@@ -534,9 +589,12 @@ footer .by {
     display: flex;
     justify-content: space-evenly;
   }
+  main .mt .textmain {
+    font-size: small;
+  }
   .logo img {
-    width: 420px;
-    height: 280px;
+    width: 390px;
+    height: 300px;
     position: relative;
     left: 0;
   }
