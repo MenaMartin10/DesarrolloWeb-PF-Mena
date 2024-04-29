@@ -81,9 +81,20 @@
   @mixin wppid-hover{
     &:hover{
     filter: brightness(70%);
+  }
+  }
 
+  @mixin vp-hover{
+    &:hover{
+    color: rgba($color-white, 0.2);
+    border: 2px solid $color-bluedark;
   }
   }
-      
+
+  @mixin perfil-color-hover{
+    &:hover{
+    filter: grayscale(0);
+  }
+  }
   
   
