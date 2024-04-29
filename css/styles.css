@@ -147,14 +147,18 @@ main .textmain h1 {
 }
 
 .mitexto {
-  margin: 100px;
-  padding: 50px;
+  margin: 0px 0px 50px 0px;
+  padding: 0px 0px 50px 0px;
   height: 100%;
   border-bottom: 0.2px solid rgba(255, 255, 255, 0.2);
 }
 
 h4 {
   font-size: small;
+}
+
+.studio {
+  overflow: hidden;
 }
 
 .perfil img {
