@@ -142,7 +142,8 @@ main {
   @include flex-space-around;
   margin-top: 100px;
   margin-bottom: 100px;
-  padding-bottom: 50px;
+  padding-bottom: 100px;
+  padding-top: 100px;
   border-bottom: 0.2px solid rgba($color-white, 0.2);
 
 
@@ -452,6 +453,7 @@ footer {
   .imgstudio{
     display: grid;
     justify-items: center;
+    gap: 150px;
   }
 
   .perfil img {
@@ -462,10 +464,8 @@ footer {
 
   .mitexto{
     font-size: small;
-  }
-
-  .imgstudio{
-    gap: 50px;
+    margin: 0px;
+    padding: 50px;
   }
 
   .navbar a{
@@ -486,11 +486,6 @@ footer {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-  }
-
-  .social a {
-    font-size: 10px;
-    margin: 5px;
   }
 
   .studio p{
@@ -539,10 +534,6 @@ main .mt .textmain{
 
 }
 
-.mitexto{
-  margin: 0px;
-  padding: 50px;
-}
 
 
 @media only screen and (max-width: 700px) and (min-width: 450px) {
@@ -741,7 +732,7 @@ main .textmain{
   }
 
   .social .fa {
-    font-size: 30px;
+    font-size: 15px;
   }
 
   #irarriba {
