@@ -449,6 +449,11 @@ footer {
 
 @media only screen and (max-width: 450px) and (min-width: 250px) {
 
+  .imgstudio{
+    display: grid;
+    justify-items: center;
+  }
+
   .perfil img {
     margin: 0px;
     width: 300px;
