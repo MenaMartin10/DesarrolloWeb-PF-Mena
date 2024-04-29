@@ -19,7 +19,7 @@ body {
 }
 
 header {
-  @include flex-space-around;
+  @include flex-space-between;
   background: $color-bluedark;
   text-align: center;
 }
@@ -41,7 +41,6 @@ header nav ul {
       margin-left: 10px;
       margin-right: 10px;
       @include hover-effect-s;
-      filter: blur(0.1px);
     }
   }
 
@@ -72,12 +71,11 @@ header nav ul {
 .logo img {
   width: 420px;
   height: 350px;
-  filter: blur(0.1px);
 }
 
 main {
-  border-top: 0.2px solid rgba($color-white, 0.7);
-  border-bottom: 0.2px solid rgba($color-white, 0.7);
+  border-top: 0.2px solid rgba($color-white, 0.2);
+  border-bottom: 0.2px solid rgba($color-white, 0.2);
   color: $color-white;
   font-size: 17px;
   text-align: left;
@@ -126,43 +124,44 @@ main {
   }
 
   .allmuestras {
-    display: grid;
-    gap: 50px;
-    justify-content: center;
+    justify-items: center;
+    text-align: center;
 }
 
   .muestras {
-    display: block;
+    width: 50%;
     background-color: rgba($color-black, 0.2);
     border-radius: 10px;
     margin: 40px auto;
     padding: 20px;
     text-align: center;
-    filter: brightness(50%);
     transition: 1s;
-
-    &:hover {
-      filter: brightness(150%);
     }
 
-    .studio {
-      p {
-        margin: 20px 0;
-      }
-    }
+.imgstudio{
+  @include flex-space-around;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  padding-bottom: 50px;
+  border-bottom: 0.2px solid rgba($color-white, 0.2);
 
-    .imgstudio {
-      margin: 10px auto;
 
-      img {
-        display: block;
-        margin: auto;
-        max-width: 100%; 
-        height: auto;
-      }
-
-    }
+  img{
+  width: 100%;
+  height: 100%;
   }
+  }
+    
+.mitexto{
+  margin: 100px;
+  padding: 50px;
+  height: 100%;
+  border-bottom: 0.2px solid rgba($color-white, 0.2);
+}
+
+h4{
+  font-size: small;
+}
 
   .precios {
     display: flex;
@@ -404,8 +403,8 @@ footer {
 }
 
 #carouselExample .carousel-inner .carousel-item img {
-  max-width: 80%;
-  height: 700px;
+  max-width: 60%;
+  height: 800px;
   margin: 0 auto;
   border-radius: 10px;
 }
@@ -434,6 +433,10 @@ footer {
 
 
 @media only screen and (max-width: 450px) and (min-width: 250px) {
+
+  .imgstudio{
+    gap: 50px;
+  }
 
   .navbar a{
     font-size: 9px;
@@ -484,7 +487,7 @@ footer {
     font-size: 12px;
   }
   main #carouselExample .carousel-inner .carousel-item img{
-    height: 500px;
+    height: 350px;
   }
 
   main .textmain h1 {
@@ -505,6 +508,12 @@ main .mt .textmain{
 
 
 }
+
+.mitexto{
+  margin: 0px;
+  padding: 50px;
+}
+
 
 @media only screen and (max-width: 700px) and (min-width: 450px) {
 
@@ -667,6 +676,11 @@ main .textmain{
 
 @media only screen and (max-width: 1400px) {
 
+  #carouselExample .carousel-inner .carousel-item img {
+    max-width: 100%;
+    height: 100%;
+    }
+
   main .maininicio{
     background: none;
   }
@@ -690,8 +704,8 @@ main .textmain{
   }
 
   .logo img {
-    width: 390px;
-    height: 300px;
+    width: 300px;
+    height: 280px;
     position: relative;
     left: 0;
   }
@@ -709,37 +723,6 @@ main .textmain{
   }
 }
 
-.images {
-  @include flex-grid;
 
-  .image {
-    position: relative;
 
-    img {
-      max-width: 100%;
-      height: auto;
-    }
-
-    p {
-      margin-top: 10px;
-      color: $color-white;
-    }
-
-    a {
-      @include flex-center;
-      @extend %border;
-      margin-top: 10px;
-      color: $color-yellow;
-      text-decoration: none;
-      transition: 0.5s;
-      border-radius: 5px; 
-      padding: 5px;
-
-      &:hover {
-        color: $color-black;
-        background-color: $color-yellow; 
-      }
-    }
-  }
-}
 

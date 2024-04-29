@@ -1,8 +1,3 @@
-.images .image a {
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 10px;
-}
-
 * {
   overflow-x: hidden;
   margin: 0;
@@ -18,8 +13,7 @@ body {
 
 header {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: space-between;
   background: #171b21;
   text-align: center;
 }
@@ -42,7 +36,6 @@ header nav ul li a {
   border-radius: 5px;
   margin-left: 10px;
   margin-right: 10px;
-  filter: blur(0.1px);
 }
 header nav ul li a:hover {
   color: white;
@@ -71,12 +64,11 @@ header nav ul .nav-itemc {
 .logo img {
   width: 420px;
   height: 350px;
-  filter: blur(0.1px);
 }
 
 main {
-  border-top: 0.2px solid rgba(255, 255, 255, 0.7);
-  border-bottom: 0.2px solid rgba(255, 255, 255, 0.7);
+  border-top: 0.2px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 0.2px solid rgba(255, 255, 255, 0.2);
   color: white;
   font-size: 17px;
   text-align: left;
@@ -125,35 +117,43 @@ main .textmain h1 {
 }
 
 .allmuestras {
-  display: grid;
-  gap: 50px;
-  justify-content: center;
+  justify-items: center;
+  text-align: center;
 }
 
 .muestras {
-  display: block;
+  width: 50%;
   background-color: rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   margin: 40px auto;
   padding: 20px;
   text-align: center;
-  filter: brightness(50%);
   transition: 1s;
 }
-.muestras:hover {
-  filter: brightness(150%);
+
+.imgstudio {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  padding-bottom: 50px;
+  border-bottom: 0.2px solid rgba(255, 255, 255, 0.2);
 }
-.muestras .studio p {
-  margin: 20px 0;
+.imgstudio img {
+  width: 100%;
+  height: 100%;
 }
-.muestras .imgstudio {
-  margin: 10px auto;
+
+.mitexto {
+  margin: 100px;
+  padding: 50px;
+  height: 100%;
+  border-bottom: 0.2px solid rgba(255, 255, 255, 0.2);
 }
-.muestras .imgstudio img {
-  display: block;
-  margin: auto;
-  max-width: 100%;
-  height: auto;
+
+h4 {
+  font-size: small;
 }
 
 .precios {
@@ -389,8 +389,8 @@ footer .by {
   }
 }
 #carouselExample .carousel-inner .carousel-item img {
-  max-width: 80%;
-  height: 700px;
+  max-width: 60%;
+  height: 800px;
   margin: 0 auto;
   border-radius: 10px;
 }
@@ -420,6 +420,9 @@ footer .by {
 }
 
 @media only screen and (max-width: 450px) and (min-width: 250px) {
+  .imgstudio {
+    gap: 50px;
+  }
   .navbar a {
     font-size: 9px;
   }
@@ -457,7 +460,7 @@ footer .by {
     font-size: 12px;
   }
   main #carouselExample .carousel-inner .carousel-item img {
-    height: 500px;
+    height: 350px;
   }
   main .textmain h1 {
     font-size: calc(8.5vw + 10px);
@@ -473,6 +476,11 @@ footer .by {
     display: block;
   }
 }
+.mitexto {
+  margin: 0px;
+  padding: 50px;
+}
+
 @media only screen and (max-width: 700px) and (min-width: 450px) {
   main .mt {
     display: inline-block;
@@ -609,6 +617,10 @@ footer .by {
   }
 }
 @media only screen and (max-width: 1400px) {
+  #carouselExample .carousel-inner .carousel-item img {
+    max-width: 100%;
+    height: 100%;
+  }
   main .maininicio {
     background: none;
   }
@@ -628,8 +640,8 @@ footer .by {
     font-size: small;
   }
   .logo img {
-    width: 390px;
-    height: 300px;
+    width: 300px;
+    height: 280px;
     position: relative;
     left: 0;
   }
@@ -646,40 +658,6 @@ footer .by {
   main .form {
     width: 100%;
   }
-}
-.images {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 20px;
-  align-items: center;
-  text-align: center;
-}
-.images .image {
-  position: relative;
-}
-.images .image img {
-  max-width: 100%;
-  height: auto;
-}
-.images .image p {
-  margin-top: 10px;
-  color: white;
-}
-.images .image a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin-top: 10px;
-  color: yellow;
-  text-decoration: none;
-  transition: 0.5s;
-  border-radius: 5px;
-  padding: 5px;
-}
-.images .image a:hover {
-  color: black;
-  background-color: yellow;
 }
 
 /*# sourceMappingURL=styles.css.map */
