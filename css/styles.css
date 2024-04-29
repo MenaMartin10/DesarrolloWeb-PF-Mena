@@ -157,10 +157,13 @@ h4 {
 }
 
 .perfil img {
-  width: 400px;
-  height: 400px;
+  margin: 50px;
+  width: 330px;
+  height: 330px;
   border-radius: 50%;
   filter: grayscale(1);
+  border: 2px solid white;
+  transition: 1s;
 }
 .perfil img:hover {
   filter: grayscale(0);
@@ -430,6 +433,14 @@ footer .by {
 }
 
 @media only screen and (max-width: 450px) and (min-width: 250px) {
+  .perfil img {
+    margin: 0px;
+    width: 300px;
+    height: 300px;
+  }
+  .mitexto {
+    font-size: small;
+  }
   .imgstudio {
     gap: 50px;
   }
