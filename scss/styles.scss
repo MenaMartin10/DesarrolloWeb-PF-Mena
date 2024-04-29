@@ -146,12 +146,20 @@ main {
   padding-top: 100px;
   border-bottom: 0.2px solid rgba($color-white, 0.2);
 
+  .soperativo{
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
 
-  img{
-  width: 100%;
-  height: 100%;
+  .iconstudio{
+    img{
+      max-width: 86px;
+      max-height: 86px;
+    }
   }
-  }
+}
     
 .mitexto{
   margin: 0px 0px 50px 0px;
@@ -161,7 +169,7 @@ main {
 }
 
 h4{
-  font-size: small;
+  font-size: 20px;
 }
 
 .studio{
@@ -454,6 +462,10 @@ footer {
 
 @media only screen and (max-width: 450px) and (min-width: 250px) {
 
+  h4{
+    font-size: 10px;
+  }
+
   .imgstudio{
     display: grid;
     justify-items: center;
@@ -493,7 +505,7 @@ footer {
   }
 
   .studio p{
-    font-size: 10px;
+    font-size: 20px;
   }
 
   main .map{
@@ -541,6 +553,16 @@ main .mt .textmain{
 
 
 @media only screen and (max-width: 700px) and (min-width: 450px) {
+
+  h4{
+    font-size: 20px;
+  }
+
+  .imgstudio{
+    display: grid;
+    justify-items: center;
+    gap: 150px;
+  }
 
   main .mt {
     @include flex-block;
@@ -597,6 +619,10 @@ main .textmain{
 
 @media screen and (min-width: 600px) {
 
+  h4{
+    font-size: 15px;
+  }
+
 
   .muestra {
       width: calc(50% - 10px);
@@ -623,6 +649,16 @@ main .textmain{
 }
 
 @media (max-width: 992px) {
+
+  #carouselExample .carousel-inner .carousel-item img {
+    max-width: 400px;
+    height: 400px;
+    }
+
+  h4{
+    font-size: 15px;
+  }
+
 
   .navbar {
     @include flex-center;
@@ -671,6 +707,12 @@ main .textmain{
 
 @media only screen and (max-width: 1080px) {
 
+  #carouselExample .carousel-inner .carousel-item img {
+    max-width: 400px;
+    height: 400px;
+    }
+
+
   main .maininicio{
     background: none;
   }
@@ -702,8 +744,8 @@ main .textmain{
 @media only screen and (max-width: 1400px) {
 
   #carouselExample .carousel-inner .carousel-item img {
-    max-width: 100%;
-    height: 100%;
+    max-width: 400px;
+    height: 400px;
     }
 
   main .maininicio{

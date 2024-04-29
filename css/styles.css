@@ -141,9 +141,13 @@ main .textmain h1 {
   padding-top: 100px;
   border-bottom: 0.2px solid rgba(255, 255, 255, 0.2);
 }
-.imgstudio img {
+.imgstudio .soperativo img {
   width: 100%;
   height: 100%;
+}
+.imgstudio .iconstudio img {
+  max-width: 86px;
+  max-height: 86px;
 }
 
 .mitexto {
@@ -154,7 +158,7 @@ main .textmain h1 {
 }
 
 h4 {
-  font-size: small;
+  font-size: 20px;
 }
 
 .studio {
@@ -438,6 +442,9 @@ footer .by {
 }
 
 @media only screen and (max-width: 450px) and (min-width: 250px) {
+  h4 {
+    font-size: 10px;
+  }
   .imgstudio {
     display: grid;
     justify-items: center;
@@ -471,7 +478,7 @@ footer .by {
     flex-wrap: wrap;
   }
   .studio p {
-    font-size: 10px;
+    font-size: 20px;
   }
   main .map {
     height: 400px;
@@ -503,6 +510,14 @@ footer .by {
   }
 }
 @media only screen and (max-width: 700px) and (min-width: 450px) {
+  h4 {
+    font-size: 20px;
+  }
+  .imgstudio {
+    display: grid;
+    justify-items: center;
+    gap: 150px;
+  }
   main .mt {
     display: inline-block;
   }
@@ -550,6 +565,9 @@ footer .by {
   }
 }
 @media screen and (min-width: 600px) {
+  h4 {
+    font-size: 15px;
+  }
   .muestra {
     width: calc(50% - 10px);
     margin-bottom: 20px;
@@ -569,6 +587,13 @@ footer .by {
   }
 }
 @media (max-width: 992px) {
+  #carouselExample .carousel-inner .carousel-item img {
+    max-width: 400px;
+    height: 400px;
+  }
+  h4 {
+    font-size: 15px;
+  }
   .navbar {
     display: flex;
     justify-content: center;
@@ -609,6 +634,10 @@ footer .by {
   }
 }
 @media only screen and (max-width: 1080px) {
+  #carouselExample .carousel-inner .carousel-item img {
+    max-width: 400px;
+    height: 400px;
+  }
   main .maininicio {
     background: none;
   }
@@ -639,8 +668,8 @@ footer .by {
 }
 @media only screen and (max-width: 1400px) {
   #carouselExample .carousel-inner .carousel-item img {
-    max-width: 100%;
-    height: 100%;
+    max-width: 400px;
+    height: 400px;
   }
   main .maininicio {
     background: none;
