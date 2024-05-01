@@ -119,6 +119,15 @@ main .textmain h1 {
   font-size: calc(1.5vw + 10px);
 }
 
+.firma {
+  text-align: center;
+  padding-top: 20px;
+}
+.firma img {
+  width: 100px;
+  height: 80px;
+}
+
 .allmuestras {
   justify-items: center;
   text-align: center;
