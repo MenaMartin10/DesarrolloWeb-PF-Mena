@@ -165,7 +165,7 @@ main {
     }
 
     img{
-      width: 100%;
+      width: 90%;
       height: 100%;
     }
   }
@@ -207,10 +207,13 @@ main {
 
 .pyl{
   @include flex-space-around;
+
+  img{
+    width: 100%;
+  }
 }
 
   .precios {
-    width: 100%;
     display: flex;
     flex-direction: column; 
     align-items: center; 
@@ -447,7 +450,7 @@ footer {
   border-radius: 10px;
 }
 
-.wppflotante{
+.whatsapp-flotante{
   position: fixed;
   line-height: 55px;
   bottom: 30px;
@@ -458,7 +461,7 @@ footer {
   overflow: hidden;
 }
 
-#wppid{
+#whatsapp-buttom{
   text-decoration: none;
   color: $color-bluedark;
   box-shadow: 0px 1px 10px rgba(0,0,0,0.3);
