@@ -136,7 +136,6 @@ main .textmain h1 {
 
 .muestras {
   width: 50%;
-  background-color: rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   margin: 40px auto;
   padding: 20px;
@@ -146,16 +145,15 @@ main .textmain h1 {
 
 .imgstudio {
   display: flex;
-  justify-content: space-between;
-  margin-left: 100px;
-  margin-right: 100PX;
-  margin-top: 100px;
-  margin-bottom: 100px;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.2);
+  margin: 100px 100px 100px 100px;
   padding-bottom: 100px;
   padding-top: 100px;
-  border-bottom: 0.2px solid rgba(255, 255, 255, 0.2);
-  border-top: 0.2px solid rgba(255, 255, 255, 0.2);
   align-items: center;
+  border: 0.2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
 }
 .imgstudio .soperativo {
   text-align: center;
@@ -178,10 +176,12 @@ main .textmain h1 {
 }
 
 .mitexto {
-  margin: 0px 0px 50px 0px;
-  padding: 0px 0px 50px 0px;
+  background-color: rgba(0, 0, 0, 0.2);
+  margin: 50px;
+  padding: 50px;
   height: 100%;
-  border-bottom: 0.2px solid rgba(255, 255, 255, 0.2);
+  border: 0.2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
 }
 
 .studio {
@@ -463,6 +463,84 @@ footer .by {
   filter: brightness(70%);
 }
 
+.cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 100px 100px 100px 100px;
+}
+
+.card {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 0.2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  margin: 10px;
+  padding: 50px;
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+}
+
+.card-body {
+  padding: 10px;
+}
+
+.progressc {
+  padding: 10px;
+}
+
+.progress {
+  background: #171b21;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  position: relative;
+  height: 30px;
+}
+
+.progress-bar {
+  background-color: rgba(0, 128, 0, 0.09);
+  border: 0.5px solid rgba(255, 255, 255, 0.8);
+  height: 100%;
+  width: 0;
+  border-radius: 5px;
+  transition: width 2s ease-in-out;
+  position: relative;
+}
+
+.progress-bar.completed {
+  background-color: rgba(0, 128, 0, 0.09);
+}
+
+.progress-bar.incomplete {
+  background-color: rgba(0, 123, 255, 0.09);
+}
+
+.progress p {
+  margin: 0;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  line-height: 30px;
+  color: white;
+}
+
+.lenguajes {
+  text-align: center;
+}
+
+.iconprog img {
+  width: 45px;
+  height: 45px;
+  margin: 20px;
+}
+
+#leng {
+  color: #ffffff;
+}
+
 @media only screen and (max-width: 450px) and (min-width: 250px) {
   h4 {
     font-size: 10px;
@@ -472,6 +550,7 @@ footer .by {
     justify-items: center;
     justify-content: center;
     gap: 70px;
+    margin: 0;
   }
   .perfil img {
     margin: 0px;
@@ -480,7 +559,7 @@ footer .by {
   }
   .mitexto {
     font-size: small;
-    margin: 0px;
+    margin: 50px 0px 0px 0px;
     padding: 50px;
   }
   .navbar a {
@@ -530,6 +609,12 @@ footer .by {
   }
   .pyd {
     display: block;
+  }
+  .cards {
+    margin: 0;
+  }
+  #lenguajesid {
+    margin: 100px;
   }
 }
 @media only screen and (max-width: 700px) and (min-width: 450px) {
