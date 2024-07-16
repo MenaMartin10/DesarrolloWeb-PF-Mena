@@ -25,20 +25,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.addEventListener('DOMContentLoaded', () => {
     const circles = document.querySelectorAll('.circle-container');
-
+  
     circles.forEach(container => {
-        const circle = container.querySelector('.circle');
-        const value = container.getAttribute('data-value');
-        let percentage = 0;
-        
-        const interval = setInterval(() => {
-            if (percentage >= value) {
-                clearInterval(interval);
-            } else {
-                percentage++;
-                circle.style.background = `conic-gradient(var(--primary-color) ${percentage * 3.6}deg, var(--secondary-color) 0deg)`;
-                circle.setAttribute('data-value', percentage);
-            }
-        }, 20); // Adjust the interval speed as needed
+      const circle = container.querySelector('.circle');
+      const value = container.getAttribute('data-value');
+      let percentage = 0;
+  
+      const interval = setInterval(() => {
+        if (percentage >= value) {
+          clearInterval(interval);
+          if (percentage == 100) {
+            circle.classList.add('completed');
+          } else {
+            circle.classList.add('incomplete');
+          }
+        } else {
+          percentage++;
+          circle.style.background = `conic-gradient(${percentage == 100 ? 'rgba(0, 128, 0, 0.090)' : 'rgba(0, 123, 255, 0.090)'} ${percentage * 3.6}deg, var(--secondary-color) 0deg)`;
+          circle.setAttribute('data-value', percentage);
+        }
+      }, 20); // Adjust the interval speed as needed
     });
-});
+  });

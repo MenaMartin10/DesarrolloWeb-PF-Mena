@@ -572,6 +572,11 @@ footer {
   text-align: center;
   flex: 1 1 45%;
   order: 3;
+
+  p{
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
 }
 
 .right-column {
@@ -594,6 +599,11 @@ ul li {
   align-items: center;
   margin-bottom: 10px;
   width: 100%;
+  text-decoration: none;
+}
+
+#empresa{
+  color: rgba(255, 255, 255, 0.534);
 }
 
 .circle-container {
@@ -606,13 +616,22 @@ ul li {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background: conic-gradient(var(--primary-color, #171b21) 0%, var(--primary-color, #171b21) 0%, var(--secondary-color, #e9ecef41) 0%, var(--secondary-color, #e9ecef2c) 100%);
+  background: conic-gradient(var(--primary-color, #171b21) 0%, var(--primary-color, #171b21) 0%, var(--secondary-color, #efe9e941) 0%, var(--secondary-color, #0080ff2c) 100%);
   border: 1px solid rgba($color-white, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 10px;
   color: var(--primary-color, #171b21);
+  transform: 0.5s;
+}
+
+.circle.completed {
+  background: rgba(0, 128, 0, 0.090);
+}
+
+.circle.incomplete {
+  background: rgba(0, 123, 255, 0);
 }
 
 .circle:after {
@@ -622,10 +641,9 @@ ul li {
   color: var(--text-color, #ffffff);
 }
 
-
 :root {
   --primary-color: #171b21; 
-  --secondary-color: #e9ecef3f; 
+  --secondary-color: #0080ff00; 
   --text-color: #ffffff; 
 }
 
@@ -633,6 +651,10 @@ ul li {
   display: flex;
   justify-content: center;
   text-align: center;
+
+  li{
+    font-size: large
+  }
 }
 
 .conocimiento{
@@ -673,13 +695,15 @@ ul li {
   }
 
   .circle-container {
+    @include flex-space-between;
     position: relative;
-    width: 35px;
-    height: 35px;
+    width: 50px;
+    height: 50px;
   }
 
   .conocimiento{
     @include flex-space-between;
+    text-align: justify;
   }
 
   h4{
@@ -775,7 +799,7 @@ main .mt .textmain{
 }
 
 #lenguajesid{
-  margin: 50px;
+  margin: 25px;
 }
 
 }
