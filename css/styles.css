@@ -147,12 +147,10 @@ main .textmain h1 {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.2);
   margin: 100px 100px 100px 100px;
   padding-bottom: 100px;
   padding-top: 100px;
   align-items: center;
-  border: 0.2px solid rgba(255, 255, 255, 0.2);
   border-radius: 10px;
 }
 .imgstudio .soperativo {
@@ -173,15 +171,6 @@ main .textmain h1 {
 .imgstudio .iconstudio img {
   max-width: 86px;
   max-height: 86px;
-}
-
-.mitexto {
-  background-color: rgba(0, 0, 0, 0.2);
-  margin: 50px;
-  padding: 50px;
-  height: 100%;
-  border: 0.2px solid rgba(255, 255, 255, 0.2);
-  border-radius: 10px;
 }
 
 .studio {
@@ -472,7 +461,7 @@ footer .by {
 
 .card {
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: #171b21;
   border-radius: 10px;
   margin: 10px;
   padding: 50px;
@@ -548,21 +537,15 @@ footer .by {
 }
 
 .mitexto {
-  background-color: rgba(0, 0, 0, 0.2);
   color: white;
   margin: 50px;
   padding: 50px;
   height: 100%;
-  border: 0.2px solid rgba(255, 255, 255, 0.2);
-  border-radius: 10px;
-  flex: 1 1 45%;
-  order: 1;
-  text-align: left;
+  text-align: center;
 }
 
 .left-column {
   display: block;
-  background-color: rgba(0, 0, 0, 0.2);
   color: white;
   padding: 20px;
   margin-bottom: 50px;
@@ -580,6 +563,7 @@ footer .by {
   overflow: hidden;
   flex: 1 1 100%;
   order: 2;
+  text-align: center;
 }
 
 ul {
