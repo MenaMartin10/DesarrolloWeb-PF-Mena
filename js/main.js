@@ -22,3 +22,23 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 20); // Adjust the interval speed as needed
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const circles = document.querySelectorAll('.circle-container');
+
+    circles.forEach(container => {
+        const circle = container.querySelector('.circle');
+        const value = container.getAttribute('data-value');
+        let percentage = 0;
+        
+        const interval = setInterval(() => {
+            if (percentage >= value) {
+                clearInterval(interval);
+            } else {
+                percentage++;
+                circle.style.background = `conic-gradient(var(--primary-color) ${percentage * 3.6}deg, var(--secondary-color) 0deg)`;
+                circle.setAttribute('data-value', percentage);
+            }
+        }, 20); // Adjust the interval speed as needed
+    });
+});

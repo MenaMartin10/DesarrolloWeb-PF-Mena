@@ -493,7 +493,6 @@ footer {
 .card {
   width: 100%;
   background-color: rgba($color-black, 0.2);
-  border: 0.2px solid rgba($color-white, 0.2);
   border-radius: 10px;
   margin: 10px;
   padding: 50px;
@@ -515,6 +514,7 @@ footer {
   position: relative;
   height: 30px;
 }
+
 .progress-bar {
   background-color: rgba(0, 128, 0, 0.090);
   border: 0.5px solid rgba($color-white, 0.2);
@@ -555,9 +555,145 @@ footer {
   color: #ffffff;
 }
 
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.mitexto {
+  background-color: rgba($color-black, 0.2);
+  color: $color-white;
+  margin: 50px; 
+  padding: 50px;
+  height: 100%;
+  border: 0.2px solid rgba($color-white, 0.2);
+  border-radius: 10px;
+  flex: 1 1 45%;
+  order: 1;
+  text-align: left;
+}
+
+.left-column {
+  display: block;
+  background-color: rgba($color-black, 0.2);
+  color: $color-white;
+  padding: 20px;
+  margin-bottom: 50px;
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+  flex: 1 1 45%;
+  order: 3;
+}
+
+.right-column {
+  padding: 20px;
+  width: 100%;
+  margin-bottom: 50px;
+  overflow: hidden;
+  flex: 1 1 100%;
+  order: 2;
+}
+
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  align-items: center;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.circle-container {
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.circle {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: conic-gradient(var(--primary-color, #171b21) 0%, var(--primary-color, #171b21) 0%, var(--secondary-color, #e9ecef41) 0%, var(--secondary-color, #e9ecef2c) 100%);
+  border: 1px solid rgba($color-white, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  color: var(--primary-color, #171b21);
+}
+
+.circle:after {
+  content: attr(data-value) '%';
+  position: absolute;
+  font-size: 10px;
+  color: var(--text-color, #ffffff);
+}
+
+
+:root {
+  --primary-color: #171b21; 
+  --secondary-color: #e9ecef3f; 
+  --text-color: #ffffff; 
+}
+
+.conocimientos{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.conocimiento{
+  @include flex-space-between;
+  gap: 100px;
+  text-align: center;
+}
+
+
+.section-title {
+  border-bottom: 2px solid rgba($color-white, 0.2);
+  padding-bottom: 5px;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  overflow: hidden;
+}
+
+.contact-info, .hobbies {
+  @include flex-block;
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  overflow: hidden;
+}
+
+.miCv{
+  text-align: center;
+  margin-top: 50px;
+  overflow: hidden;
+}
+
 
 @media only screen and (max-width: 450px) and (min-width: 250px) {
 
+  ul li {
+    font-size: xx-small;
+  }
+
+  .circle-container {
+    position: relative;
+    width: 35px;
+    height: 35px;
+  }
+
+  .conocimiento{
+    @include flex-space-between;
+  }
 
   h4{
     font-size: 10px;
@@ -568,7 +704,8 @@ footer {
     justify-items: center;
     justify-content: center;
     gap: 70px;
-    margin: 0;
+    margin-top: 40px;
+    margin: 30px 0 30px 0px;
   }
 
   .perfil img {
@@ -655,6 +792,7 @@ main .mt .textmain{
 }
 
 }
+
 
 
 
