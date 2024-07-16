@@ -159,8 +159,6 @@ main {
 .imgstudio{
   @include flex-space-around;
   margin: 100px 100px 100px 100px;
-  padding-bottom: 100px;
-  padding-top: 100px;
   align-items: center;
   border-radius: 10px;
 
@@ -191,6 +189,10 @@ main {
     
 .studio{
   overflow: hidden;
+
+  h4{
+    text-align: center;
+  }
 }
 
 .perfil{
@@ -486,6 +488,7 @@ footer {
   margin: 10px;
   padding: 50px;
   overflow: hidden;
+  border: none;
 }
 .card img {
   width: 100%;
@@ -772,7 +775,7 @@ main .mt .textmain{
 }
 
 #lenguajesid{
-  margin: 100px;
+  margin: 50px;
 }
 
 }

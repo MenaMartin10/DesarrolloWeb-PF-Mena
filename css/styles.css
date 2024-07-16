@@ -148,8 +148,6 @@ main .textmain h1 {
   justify-content: space-around;
   align-items: center;
   margin: 100px 100px 100px 100px;
-  padding-bottom: 100px;
-  padding-top: 100px;
   align-items: center;
   border-radius: 10px;
 }
@@ -175,6 +173,9 @@ main .textmain h1 {
 
 .studio {
   overflow: hidden;
+}
+.studio h4 {
+  text-align: center;
 }
 
 .perfil img {
@@ -466,6 +467,7 @@ footer .by {
   margin: 10px;
   padding: 50px;
   overflow: hidden;
+  border: none;
 }
 
 .card img {
@@ -731,7 +733,7 @@ ul li {
     margin: 0;
   }
   #lenguajesid {
-    margin: 100px;
+    margin: 50px;
   }
 }
 @media only screen and (max-width: 700px) and (min-width: 450px) {
